@@ -10,7 +10,7 @@ git --version
 ### Configuration
 ```
 git config --global user.name "Your Name"
-git config --global user.email <Your Email Address>
+git config --global user.email <YourEmailAddress>
 ```
 
 ### Check Git Config
@@ -22,7 +22,7 @@ git config --list
 
 ### Initialize Git or Clone existing project from remote repo
 ```
-git init <Project Name>
+git init <ProjectName>
 ```
 ```
 git clone <RepositoryURL>
@@ -64,14 +64,25 @@ git checkout -- <FilePath>
 
 ## Remote repository workflow
 
-### Link remote repository
+### Check existing remote repository
 ```
-git remote add origin <repositoryURL>
+git remote -v
+```
+
+### Link remote repository
+`origin` is the most common alias
+```
+git remote add <RemoteAlias> <RepositoryURL>
 ```
 
 ### Push commits to remote repository
 ```
-git push -u origin master
+git push -u <RemoteAlias> master
+```
+
+### Remove remote repository
+```
+git remote rm <RemoteAlias>
 ```
 
 
